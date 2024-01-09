@@ -1,0 +1,462 @@
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  padding: 0px 30px;
+  background-color: #fff;
+  overflow-y: scroll;
+  /* Izinkan guliran vertikal */
+  scrollbar-width: thin;
+  /* Sembunyikan scrollbar pada browser yang mendukung */
+  scrollbar-color: transparent transparent;
+  /* Sembunyikan scrollbar pada browser yang mendukung */
+}
+
+/* Sembunyikan scrollbar pada browser yang tidak mendukung scrollbar-color */
+body::-webkit-scrollbar {
+  /* Atur lebar scrollbar */
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  /* Sembunyikan warna thumb scrollbar */
+  background-color: transparent;
+}
+
+/* styling navbar menu */
+.menuButton {
+  display: none;
+}
+
+.profile {
+  display: none;
+}
+
+.navbar {
+  background-color: #fff;
+  top: 0;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand .logo {
+  width: 150px;
+  height: 45px;
+}
+
+.navbar .search-form {
+  background-color: #f1f1f1;
+  padding: 0 10px;
+  border-radius: 20px;
+  color: #0bb4ac;
+  width: 500px;
+}
+
+.navbar .search-input {
+  padding: 7px;
+  border: 2px solid #f1f1f1;
+  border-radius: 15px;
+  outline: none;
+  width: 450px;
+  background-color: #f1f1f1;
+}
+
+.navbar .navbar-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-icons .notification {
+  margin: 0px 10px;
+  font-size: 20px;
+  background-color: #f6f6f6;
+  padding: 5px;
+  color: #0bb4ac;
+  width: 40px;
+  text-align: center;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.navbar-icons .notification:hover {
+  margin: 0px 10px;
+  font-size: 20px;
+  background-color: #f1f1f1;
+  padding: 5px;
+  color: #0bb4ac;
+  width: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* dropdown pada content chat di navbar */
+.chat {
+  position: relative;
+  display: inline-block;
+}
+
+.pesan {
+  margin: 0px 10px;
+  font-size: 20px;
+  background-color: #f6f6f6;
+  padding: 5px;
+  color: #0bb4ac;
+  width: 40px;
+  text-align: center;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.pesan:hover {
+  margin: 0px 10px;
+  font-size: 20px;
+  background-color: #f1f1f1;
+  padding: 5px;
+  color: #0bb4ac;
+  width: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.dropdown-menu {
+  display: none;
+  min-width: 250px;
+  z-index: 1;
+  right: 0;
+  top: 42px;
+  border-style: none;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.dropdown-menu a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 18px;
+  color: #000;
+  font-size: 14px;
+  border-bottom: 1em #000;
+}
+
+.dropdown-menu a:hover {
+  display: block;
+  text-decoration: none;
+  background-color: #f1f1f1;
+  transition: all ease-in-out 0.3s;
+}
+
+.chat:hover .dropdown-menu {
+  display: block;
+  transition: all 3.4s;
+}
+/* dropdown pada content chat di navbar */
+
+.navbar .navbar-icons .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar .navbar-icons .iconavatar .namaUser {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: #006692;
+}
+
+/* end styling navbar */
+
+/* Styling for the floating menu */
+.floating-menu {
+  position: fixed;
+  top: 50%;
+  /* Pusatkan vertikal */
+  left: 0;
+  font-size: 16px;
+  transform: translateY(-50%);
+  background-color: #0bb4ac;
+  padding: 12px;
+  color: #fff;
+  z-index: 1000;
+  height: fit-content;
+  border-radius: 90px;
+  box-sizing: border-box;
+  /* Atur indeks z agar tetap di depan konten */
+}
+
+.floating-menu a {
+  padding: 9px 9px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin: 3px;
+}
+
+.floating-menu a:hover {
+  background-color: rgb(216, 219, 224);
+  border-radius: 50%;
+  transition: all ease-in 0.3s;
+  color: #0bb4ac;
+  width: 45px;
+  height: 45px;
+  padding: 9px;
+}
+
+.floating-menu .nav-item .active {
+  background-color: rgb(216, 219, 224);
+  color: #006592e3;
+}
+
+/* Style untuk konten utama */
+.content {
+  margin-left: 40px;
+  /* Sesuaikan dengan lebar menu */
+  padding: 20px;
+  overflow-y: hidden;
+}
+
+/* style content */
+.content .title-text {
+  color: #d1dd25;
+}
+
+.content .text-table {
+  color: #0bb4ac;
+}
+
+.content .bulatan {
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid #f1f1f1;
+}
+
+.content .btnCustom {
+  height: 40px;
+  background-color: #de3f13;
+  color: #fff;
+}
+
+.content .bulatan .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* style untuk bottom navigation dimobile */
+
+.NavButtonMobil {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 8px 0px;
+}
+
+.footer .copyright {
+  font-style: bold;
+  font-weight: 400;
+  font-size: 13px;
+  color: #0bb4ac;
+}
+
+.footer .version {
+  font-style: bold;
+  font-weight: 400;
+  font-size: 13px;
+  color: #0bb4ac;
+}
+
+.footer .helpers .informasi {
+  font-style: bold;
+  font-weight: 400;
+  font-size: 13px;
+  color: #0bb4ac;
+}
+
+/* perintah untuk ganti color pada tab active */
+.content .nav-link {
+  color: #0bb4ac;
+  /* Warna teks putih */
+}
+
+.content .nav .active {
+  background-color: #0bb4ac !important;
+  /* Warna biru */
+  color: #fff;
+  /* Warna teks putih */
+}
+
+.content .nav-link:hover {
+  background-color: #1c948e !important;
+  /* Warna biru */
+  color: #fff;
+  /* Warna teks putih */
+  transition: all ease-in 0.3s;
+}
+
+.bgIcon1 {
+  background-color: #80b3ff;
+  display: flex;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.bgIcon2 {
+  background-color: #f4ce14;
+  display: flex;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.bgIcon3 {
+  background-color: #1aacac;
+  display: flex;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.bgIcon4 {
+  background-color: #ff0060;
+  display: flex;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+/* resposive layout untuk MOBILE*/
+@media screen and (max-width: 768px) {
+  body {
+    margin-top: 70px;
+    padding: 0px 0px;
+    margin-bottom: 35px;
+  }
+
+  .floating-menu {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .navbar {
+    width: 100vw;
+    background-color: #faffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .navbar .menuButton {
+    display: block;
+    background: #e7e4e4;
+    width: 45px;
+    height: 40px;
+    border-radius: 10px;
+    border-style: none;
+    color: #000;
+  }
+
+  .navbar .menuButton:hover {
+    background-color: #d3d1d1;
+    border: 1px solid #0bb4ac;
+    /* box-shadow: 1px 1px 20px 1px #d4d0d0; */
+    /* border: 1px solid #D1DD25; */
+  }
+
+  .foto-user {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar .profile {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .navbar .navbar-brand .logo {
+    width: 100px;
+    width: 130px;
+  }
+
+  .navbar {
+    .search-form {
+      display: none;
+    }
+  }
+
+  .navbar {
+    .navbar-icons {
+      display: none;
+    }
+  }
+
+  /* untuk button navigation diMOBILE */
+  .NavButtonMobil {
+    width: 100vw;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    background-color: #0bb4ac;
+    border-radius: 20px 20px 0px 0px;
+    z-index: 1000;
+  }
+
+  .NavButtonMobil .navButton-item {
+    font-size: 23px;
+    color: #fff;
+  }
+
+  .NavButtonMobil .navButton-item:hover {
+    font-size: 23px;
+  }
+
+  /* css Footer */
+  .footer {
+    display: none;
+  }
+}
+
+/* Style the dropdown container */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/* Style the dropdown button */
+.dropdown button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
